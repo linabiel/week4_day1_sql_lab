@@ -25,6 +25,8 @@ Use the supplied data as the source of data to answer the questions. Copy the SQ
 1.  Return ALL the data in the 'movies' table.
 
 SELECT * FROM movies;
+
+
  id |                title                | year | show_time 
 ----+-------------------------------------+------+-----------
   1 | Iron Man                            | 2008 | 17:00
@@ -51,6 +53,8 @@ SELECT * FROM movies;
 2.  Return ONLY the name column from the 'people' table
 
 SELECT name FROM people;
+
+
          name         
 ----------------------
  Homer Simpson
@@ -75,6 +79,7 @@ SELECT name FROM people;
 
 UPDATE people SET name = 'Krusty the Clown' WHERE name = 'Crusty the Clown';
 SELECT * FROM people;
+
 
  id |         name         
 ----+----------------------
@@ -107,6 +112,7 @@ SELECT name FROM people WHERE name = 'Homer Simpson';
 
 DELETE FROM movies WHERE title = 'Batman Begins';
 SELECT * FROM movies;
+
 
  id |                title                | year | show_time 
 ----+-------------------------------------+------+-----------
@@ -144,6 +150,7 @@ SELECT name FROM people WHERE name = 'Bart Simpson';
 DELETE FROM people WHERE name = 'Eric Cartman';
 SELECT * FROM people;
 
+
  id |         name         
 ----+----------------------
   1 | Homer Simpson
@@ -167,6 +174,7 @@ SELECT * FROM people;
 
 INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Infinity War', 2018, '00:00');
 SELECT * FROM movies;
+
 
  id |                title                | year | show_time 
 ----+-------------------------------------+------+-----------
@@ -198,6 +206,7 @@ SELECT title, show_time FROM movies WHERE title = 'Iron Man 2';
 UPDATE movies SET show_time = '20:45' WHERE title = 'Iron Man 3';
 SELECT  title, show_time FROM movies WHERE title = 'Iron Man 3';
 
+
    title    | show_time 
 ------------+-----------
  Iron Man 2 | 18:45
@@ -209,13 +218,13 @@ UPDATE 1
  Iron Man 3 | 20:45
 (1 row)
 
-
 ## Extension
 
 1.  Research how to delete multiple entries from your table in a single command.
 
 DELETE FROM movies WHERE year IN (2017);
 SELECT year FROM movies;
+
 
 year 
 ------
